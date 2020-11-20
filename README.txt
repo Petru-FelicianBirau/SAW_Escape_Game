@@ -8,15 +8,16 @@ Verwenden Sie möglichst nur legale Eingaben: wenn möglich nur Zahlen.
 Enjoy!
 
 Noch zu erledigen:
-    - Quest Puzzle
-    - Auslösemechanismus: Puzzle
-    - Pfad mit Minispiel (Wortsalat?)
     - Tutrial aufspicen mit Timer?
+    - Zimmer 2 komplett
+    - mehr Storyline?
+    - credits
 
 Bugs:
     - Wenn man durch Tür (interaktion01) zu Zimmer 1 geht, 
       springt man direkt zu interaktion11, anstatt im Hauptmenü
     - Manchmal werden nur ints als ~ akzeptiert
+    - Wenn man Puzzle (11) zum 2ten mal löst, sollte Cinematic aus sein 
 
 About:
 SAW - ist ein Escape-Game mit geringen Horror Aspekten, die vor allem beim sterben eintreten.
