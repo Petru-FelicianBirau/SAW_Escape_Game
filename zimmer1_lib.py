@@ -42,6 +42,9 @@ matrix_led = [[0,1,0,0,1,0,1,0],
             [1,1,0,0,1,1,1,1]]
 matrix_gelöst = False
 
+puzzle = [0,1,2,3,4,5,6,7,8]
+puzzle_gemischt = [0,0,0,0,0,0,0,0,0]
+
 def labor_intro():
     print("\nIch befinde mich nun in einer Art Labor.")
     print("Überfüllt von laufenden Maschinen, und laute, mechanische Geräusche.")
@@ -112,12 +115,18 @@ def interaktion10():
                                         if matrix_schalter[k][i] != matrix_lsg[k][i]:
                                             matrix_gelöst = False
                                 if matrix_gelöst == True:
-                                    print("\nHinweis")
+                                    print("\nEs scheint so, als wäre dies eine bildliche Darstellung einer Acht.")
+                                    print("Warum aber ausgerechnet die Acht?")
+                                    print("Es ist aber interessant zu wissen, was man alles mit einer Reihenfolge machen kann.")
+                                    print("Mein Entführer muss gutes mathematisches Verständnis besitzen.")
                                     break
                     else:
                         break
         else:
-            print("\nHinweis")
+            print("\nEs scheint so, als wäre dies eine bildliche Darstellung einer Acht.")
+            print("Warum aber ausgerechnet die Acht?")
+            print("Es ist aber interessant zu wissen, was man alles mit einer Reihenfolge machen kann.")
+            print("Mein Entführer muss gutes mathematisches Verständnis besitzen.")
 
 def interaktion11():
     global maximale_auffüllung
@@ -160,10 +169,13 @@ def interaktion11():
                 print("   ","   ","¯¯¯","     ","¯¯¯","     ","¯¯¯","     ","¯¯¯","     ","¯¯¯","     ","¯¯¯","\n")
                 print("   ","Ω_1:",resist[0],"  Ω_2:",resist[1],"  Ω_3:",resist[2],"  Ω_4:",resist[3],"  Ω_5:",resist[4],"  Ω_6:",resist[5],"  Ω_7:",resist[6])
                 in2=input("Aus welchem Baukasten magst du einen Widerstand nehmen? [Kastennummer / ~: Zurück]: ")
-                if var.is_integer == True and int(in2) > 0 and int(in2) <= 6:
-                    in3=input("Wo in der Schaltung soll dieser eingesteckt werden? [Widerstandsnummer / ~: Zurück]: ")
-                    if var.is_integer(in3) and int(in3) > 0 and int(in3) <= 7:
-                        resist[int(in3)-1] = resist_v[int(in2)-1]
+                if var.is_integer(in2) == True:
+                    if int(in2) > 0 and int(in2) <= 6:
+                        in3=input("Wo in der Schaltung soll dieser eingesteckt werden? [Widerstandsnummer / ~: Zurück]: ")
+                        if var.is_integer(in3) == True and int(in3) > 0 and int(in3) <= 7:
+                            resist[int(in3)-1] = resist_v[int(in2)-1]
+                    else:
+                        break
                 else:
                     break
                 for i in range(5):
@@ -284,7 +296,7 @@ def interaktion11():
                         print("Ich kann aber die Zahlenfolge nicht einreihen, weil die Zahlen durcheinander sind.")
                         print("Das spiegelt seine Unordnung wieder.")
                         print("Jedoch ist die Zahl 13 hervorgehoben, so als würde sie eine wichtige Rolle spielen.\n")
-                        input("Beliebige Nummer eingeben, um die Schacht zu schliessen: ")
+                        input("Beliebige Eingabe, um die Schacht zu schliessen: ")
                         chemie_gelöst = True
                         break
                 else:
@@ -296,10 +308,13 @@ def interaktion11():
             print("Ich kann aber die Zahlenfolge nicht einreihen, weil die Zahlen durcheinander sind.")
             print("Das spiegelt seine Unordnung wieder.")
             print("Jedoch ist die Zahl 13 hervorgehoben, so als würde sie eine wichtige Rolle spielen.\n")
-            input("Beliebige Nummer eingeben, um die Schacht zu schliessen: ")
+            input("Beliebige Eingabe, um die Schacht zu schliessen: ")
 
 def interaktion12():
-    print("hi")
+    in1=input("Womit magst du interragieren? [1: Puzzle / / ~: Zurück]: ")
+    if in1 == "1":
+        print("hi")
+
 
 def interaktion13():
     in1=input("\nMit der Tür interagieren? [1:Ja / ~: Zurück]: ")

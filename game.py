@@ -25,8 +25,8 @@ def interaktion20():
         var.zimmer = 2
 
 def haupt_interaktion():
-    in1 = input("\nWas möchtest du tun? [1:Gehe zu / 2:Drehe dich / 3:Interagiere]: ")
-    if in1 == "1":
+    in16 = input("\nWas möchtest du tun? [1:Gehe zu / 2:Drehe dich / 3:Interagiere]: ")
+    if in16 == "1":
         string = "Wohin magst du gehen? [1:"+var.verfügbare_Zimmer[0]+"/ 2:"+var.verfügbare_Zimmer[1]+"/ 3:"+var.verfügbare_Zimmer[2]+"]: "
         in2 = input(string)
         if (var.is_integer(in2)) == True:
@@ -39,7 +39,7 @@ def haupt_interaktion():
             else:
                 print("\nIch kenne dieses Zimmer nicht.")
                 time.sleep(var.standardWait)
-    elif in1 == "2":
+    elif in16 == "2":
         in2 = input("In welche Richtung soll ich mich drehen? [1:Links / 2:Rechts]: ")
         if (var.is_integer(in2)) == True:
             if int(in2) == 1:
@@ -50,7 +50,7 @@ def haupt_interaktion():
                 var.richtung = var.richtung + 1
             if var.richtung > 3:
                 var.richtung = 0
-    elif in1 == "3":
+    elif in16 == "3":
         if var.zimmer == 0 and var.richtung == 0:
             z0.interaktion00()
         if var.zimmer == 0 and var.richtung == 1:

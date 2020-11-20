@@ -22,7 +22,7 @@ code_lsg = [1,1,2,3,5,8,13]
 
 #Quest_Open_Z1:
 status_led = [Fore.RED,Fore.RED,Fore.RED]
-bild = [1,0,3]
+bild = [1,3,2]
 led = [0,0,0]
 tur_offen = False
 
