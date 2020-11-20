@@ -1,0 +1,71 @@
+def interaktion00():
+    az0 = input("Womit soll ich interagieren? [Schreibtisch/Schrank]: ")
+    if int(az0) == 1:
+            print("\nEs sind verschiedene Notizen und hängende Zeitungsartikeln zu sehen.")
+            print("Unter anderem Berichte von einer Duzend vermisster Personen,")
+            print("Anleitungen zum Bau verschiedener Bomben und unbekannte Baupläne für scheinbar mechanische Geräte.")
+            az0 = input("\nWas möchtest du tun? [Vermisstenliste schauen/Zeitungsartikeln lesen/Notiz schreiben/Zurück]: ")
+            if int(az0) == 1:
+                i = int(0)
+                while loop == True:
+                    os.system('cls||clear')
+                    print(game.vl[i][0])
+                    print(game.vl[i][1])
+                    az0=input("\nWeiter? [Ja/Beliebige Taste: Zurück]: ")
+                    if int(az0) == 1:
+                        i=i+1
+                        if i >= len(game.vl):
+                            i=0
+                    else:
+                        break
+            if int(az0) == 2:
+                i = int(0)
+                while loop == True:
+                    os.system('cls||clear')
+                    print(game.za[i][0])
+                    print(game.za[i][1])
+                    az0=input("\nWeiter? [Ja/Beliebige Taste: Zurück]: ")
+                    if int(az0) == 1:
+                        i=i+1
+                        if i >= len(game.za):
+                            i=0
+                    else:
+                        break
+            if int(az0) == 3:
+                while loop == True:
+                    os.system('cls||clear')
+                    i = int(0)
+                    while loop == True:
+                        print(game.notizen[i])
+                        i=i+1
+                        if i >= len(game.notizen):
+                            break
+                    az0=input("\nUnd nun? [Neue Notiz verfassen/Notiz löschen/Beliebige Zahl: Zurück]: ")
+                    if int(az0) == 1:
+                        az0=input("Notiz: ")
+                        game.notizen.append(str(az0))
+                    elif int(az0) == 2:
+                        az0=input("Welche Notiz soll gelöscht werden? [Notiznummer/Andere Zahl: Zurück]: ") 
+                        if int(az0)<len(az0) and int(az0) >= 0:
+                            string = game.notizen[int(az0)] ##Fehler, wird nicht gelöscht
+                            game.notizen.remove(string) 
+                    else:
+                        break    
+    if int(az0) == 2:
+        print("\nEin moderner Schrank mit 13 Fächern, überraschenderweise im guten Zustand.")
+        print("Dagegen sind die beinhaltete Bücher teilweise verbrannt und gerissen, kaum noch lesbar.")
+        print("Es sind nurnoch einzelne Sätze und teilweise Wörter zu erkennen.")
+        az0=input("\nWas möchtest du tun? [Bücher anschauen/Schrank schieben/Zurück]: ")
+        if int(az0) == 1:
+            os.system('cls||clear')
+            i = int(0)
+            while loop == True:
+                print(i,": ",game.buch_t[i])
+                i=i+1
+                if i >= len(game.buch_t):
+                    break
+                az0 = input("\nWelches Buch würdest du öffnen? [Buchnummer/Andere Zahl: Zurück]: ")
+                os.system('cls||clear')
+                print(game.buch_i[int(az0)])
+            if int(az0) == 2:
+                print("\nEin dunkler, schmaler Gang offenbart sich.")

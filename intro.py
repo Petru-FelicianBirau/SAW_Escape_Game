@@ -40,5 +40,3 @@ def intro():
     time.sleep(wait_time)
     print("     ██████████████████████████████████████████")
     time.sleep(5)
-
-   
