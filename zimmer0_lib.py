@@ -1,3 +1,5 @@
+##ich war hier
+
 import time
 import os
 from colorama import Fore, Back, Style 
