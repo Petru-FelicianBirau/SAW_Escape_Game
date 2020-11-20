@@ -1,6 +1,7 @@
 import time
 import os
 from colorama import Fore, Back, Style 
+import Variables as var
 
 def keller_intro():
     print("\nIch befinde mich nun in einer Art Keller.")
@@ -17,6 +18,13 @@ def keller(richtung: int):
         print("\nDa ist ein Tisch.")
     if richtung == 3:
         print("\nIch sehe eine Glühbirne.")
+
+def interaktion20():
+    in1=input("\nMit der Tür interagieren? [1:Ja / ~: Zurück]: ")
+    if in1 == "1":
+        var.zimmer = 0
+    else:
+        var.zimmer = 2
 
 def interaktion21():
     print("Ich kann nichts tun in der Richtung.")

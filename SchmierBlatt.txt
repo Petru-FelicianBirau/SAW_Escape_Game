@@ -3,3 +3,18 @@
 Unmittelbar vor der Hyp(E)rgrenze überquerten die großen LAC-Träger der Aviary -Klasse und ihr Geleitschutz aus Schlachtkreuzern d(I)e Alpha-Mauer und kehrten in den Normalraum zurück. Im Verband waren nur drei der superdread(N)oughtgroßen Schiffe, doch ihre Hangars spien beinahe sechshundert Leichte Angriffsboote aus. Die havenitischen LACs der Cimeterre -Klasse mochten eine leichtere Bewaffnung tragen als die Shrikes und Ferret(S) des Sternenkönigreichs von Manticore, ihnen in jeder Hinsicht unterlegen sein und eine kürzere Reichweite haben, doch ihrer augenblicklichen Aufgabe waren sie mehr als gewachsen.Während sie auf Vektoren systemeinwärts beschleunigten, die zur industriellen Infrastruktur von Alizon führten, entdeckten sie, dass sie unerwartetes Glück hatten: zwei schwerfällige Frachter, die beide manticoranische Kennungen abstrahlten und annähernd dem gleichen Kurs folgten, fanden sich genau im Anlaufweg des Kampfverbandes wieder; bereits jetzt waren sie in äußerster Raketenschussweite.
 
 »Hey – Ruschkow«, rief er, »was hast du als Nächstes vor? Willst du das gan(Z)e Europa-Center in die Luft sprengen? Aber du bist schlau genug und weißt genau, dass dies niemand riskieren würde. Du hast ge(W)onnen – Ruschkow.« Talert ließ sich nicht anmerken, dass er vom Gegenteil überzeugt war. »Lass' wenigstens die Kellnerin laufen. Sie hat mit alledem nichts zu tun. Du wolltest mich – du hast mich. Du wolltest die Regierung erpr(E)ssen und hast es getan. Was willst du noch? Ab jetzt ist es nur noch eine Sache zwischen dir und mir. Also, lass' die Frau gehen und dann kannst du mit m(I)r abrechnen.«. Ruschkow schob sein Notebook etwas von sich weg und sah Talert mit zusammengekniffenen Augen an, der diesen Gesichtsausdruck an Ruschkow abgrundtief hasste. »Ich hab' dich schon damals unterschätzt«, sagte Ruschkow nach einem kurzen Moment, »du warst clever und bist es heute immer noch. Wenn ich darüber nachdenke, dann hast du recht. Das Mädchen nützt mir wirklich nichts.«
+
+import keyboard
+
+shot_pressed = 0
+
+def on_press_reaction(event):
+    global shot_pressed
+    if event.name == 's':
+        shot_pressed += 1
+        print("shot_pressed %d times"%shot_pressed)
+
+keyboard.on_press(on_press_reaction)
+
+while True:
+    pass

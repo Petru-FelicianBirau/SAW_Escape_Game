@@ -10,20 +10,6 @@ import zimmer0_lib as z0
 import zimmer1_lib as z1
 import zimmer2_lib as z2
 
-def interaktion13():
-    az0=input("\nMit der Tür interagieren? [Ja/Belibige Nummer: Zurück]: ")
-    if int(az0) == 1:
-        var.zimmer = 0
-    else:
-        var.zimmer = 1
-
-def interaktion20():
-    az0=input("\nMit der Tür interagieren? [Ja/Belibige Nummer: Zurück]: ")
-    if int(az0) == 1:
-        var.zimmer = 0
-    else:
-        var.zimmer = 2
-
 def haupt_interaktion():
     in16 = input("\nWas möchtest du tun? [1:Gehe zu / 2:Drehe dich / 3:Interagiere]: ")
     if in16 == "1":
@@ -66,9 +52,9 @@ def haupt_interaktion():
         if var.zimmer == 1 and var.richtung == 2:
             z1.interaktion12()
         if var.zimmer == 1 and var.richtung == 3:
-            interaktion13()
+            z1.interaktion13()
         if var.zimmer == 2 and var.richtung == 0:
-            interaktion20()
+            z2.interaktion20()
         if var.zimmer == 2 and var.richtung == 1:
             z2.interaktion21()
         if var.zimmer == 2 and var.richtung == 2:
